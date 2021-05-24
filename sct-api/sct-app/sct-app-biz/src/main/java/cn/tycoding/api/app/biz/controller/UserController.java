@@ -34,7 +34,6 @@ public class UserController extends BaseController {
     @ApiOperation(value = "根据openid查询用户信息")
     @ApiImplicitParam(name = "openid", value = "openid", required = true, dataType = "String")
     public Result<TbAppUser> info(@PathVariable("openid") String openid) {
-        log.info("test");
         return new Result<TbAppUser>(appUserService.findByOpenid(openid));
     }
 
